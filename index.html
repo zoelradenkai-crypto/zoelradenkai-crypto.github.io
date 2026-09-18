@@ -314,7 +314,37 @@
       color: #777;
       letter-spacing: 2px;
     }
+.video-projects {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 50px;
+}
 
+.video-item {
+  background: #111;
+  border: 1px solid #252525;
+  overflow: hidden;
+}
+
+.video-item video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+.video-item h3 {
+  padding: 20px 20px 5px;
+  font-size: 20px;
+}
+
+.video-item p {
+  padding: 0 20px 20px;
+  color: #777;
+  font-size: 13px;
+}
     /* =========================
        CONTACT
     ========================= */
@@ -413,7 +443,9 @@
     ========================= */
 
     @media (max-width: 600px) {
-
+.video-projects {
+  grid-template-columns: 1fr;
+}
       header {
         height: 65px;
         padding: 0 20px;
@@ -733,11 +765,29 @@
       Projects.
     </h2>
 
-    <div class="video-box">
-      <span>
-        VIDEO PORTFOLIO — COMING SOON
-      </span>
-    </div>
+   <div class="video-projects">
+
+  <div class="video-item">
+    <video controls playsinline preload="metadata">
+      <source src="Teras Lunch and Coffee House.mp4" type="video/mp4">
+      Browser Anda tidak mendukung video.
+    </video>
+
+    <h3>Teras Lunch and Coffee House</h3>
+    <p>Video Project</p>
+  </div>
+
+  <div class="video-item">
+    <video controls playsinline preload="metadata">
+      <source src="Terjaga di jarak.mp4" type="video/mp4">
+      Browser Anda tidak mendukung video.
+    </video>
+
+    <h3>Terjaga di Jarak</h3>
+    <p>Video Project</p>
+  </div>
+
+</div>
 
   </section>
 
